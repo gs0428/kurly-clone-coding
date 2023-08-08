@@ -13,7 +13,6 @@ export const FlexWrap = styled.div`
 
 export const Kurly = styled.span`
   font-size: 18px;
-  font-weight: 500;
   color: ${(props) => (props.isMarket ? "#5f0080" : "rgb(181, 181, 181)")};
   margin-left: 11px;
   cursor: pointer;
