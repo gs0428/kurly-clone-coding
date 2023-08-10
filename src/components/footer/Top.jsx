@@ -39,7 +39,7 @@ export default function Top() {
         <S.DivWrap>
           <S.ContentsWrap>
             {contents.map((content, idx) => (
-              <span key={`contents${idx}`}>{content}</span>
+              <S.Content key={`contents${idx}`}>{content}</S.Content>
             ))}
           </S.ContentsWrap>
           <S.ExInfoWrap>

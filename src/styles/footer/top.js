@@ -10,6 +10,7 @@ export const DivLine = styled.div`
 export const DivWrap = styled.div`
   width: 50%;
   margin: 30px 0px;
+  cursor: default;
 `;
 
 export const CallCenter = styled.div`
@@ -44,6 +45,7 @@ export const Request = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const RequestContent = styled.div`
@@ -54,12 +56,17 @@ export const RequestContent = styled.div`
 export const NonMember = styled.span`
   color: rgb(153, 153, 153);
   font-size: 12px;
+  cursor: pointer;
 `;
 
 export const ContentsWrap = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 29px;
+`;
+
+export const Content = styled.span`
+  cursor: pointer;
 `;
 
 export const ExInfoWrap = styled.div`
@@ -71,6 +78,7 @@ export const ExInfoWrap = styled.div`
 
 export const HighlightText = styled.span`
   color: rgb(95, 0, 128);
+  cursor: pointer;
 `;
 
 export const IconWrap = styled.div`
@@ -81,6 +89,7 @@ export const Icon = styled.img`
   width: 30px;
   height: 30px;
   margin-right: 10px;
+  cursor: pointer;
 `;
 
 export const EndLine = styled.div`

@@ -15,10 +15,12 @@ export const ContentWrap = styled.div`
 
 export const Icon = styled.img`
   margin-right: 10px;
-  width : ${(props) => `${props.width}px`}
-  height : ${(props) => `${props.height}px`}
+  width: ${(props) => `${props.width}px`};
+  height: ${(props) => `${props.height}px`};
+  cursor: pointer;
 `;
 
 export const Content = styled.div`
-  width: 212px;
+  cursor: pointer;
+  width: 210px;
 `;

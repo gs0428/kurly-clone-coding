@@ -54,6 +54,7 @@ export const Search = styled.div`
   position: absolute;
   margin: 10px;
   color: #5f0080;
+  cursor: pointer;
 `;
 
 export const IconWrap = styled.div`
