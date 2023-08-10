@@ -7,10 +7,6 @@ export const Container = styled.div`
   height: 63px;
 `;
 
-export const FlexWrap = styled.div`
-  display: flex;
-`;
-
 export const Kurly = styled.span`
   font-size: 18px;
   color: ${(props) => (props.isMarket ? "#5f0080" : "rgb(181, 181, 181)")};
@@ -51,7 +47,6 @@ export const Input = styled.input`
   padding-left: 14px;
   border: 1px solid rgb(95, 0, 128);
   border-radius: 6px;
-  color: #333;
   outline: none;
 `;
 

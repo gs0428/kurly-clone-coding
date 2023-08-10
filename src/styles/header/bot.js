@@ -7,10 +7,6 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const FlexWrap = styled.div`
-  display: flex;
-`;
-
 export const Ctg = styled.span`
   position: relative;
   margin-left: 14px;
