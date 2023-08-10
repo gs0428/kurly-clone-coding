@@ -82,3 +82,8 @@ export const Icon = styled.img`
   height: 30px;
   margin-right: 10px;
 `;
+
+export const EndLine = styled.div`
+  width: 100%;
+  border: 1px solid rgb(238, 238, 238);
+`;
