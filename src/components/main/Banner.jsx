@@ -24,8 +24,8 @@ const images = [
 export default function Banner() {
   const [slideItems, setSlideItems] = useState();
   const [maxSlide, setMaxSlide] = useState(0);
-  const [offset, setOffset] = useState(0);
-  const [cur, setCur] = useState(1);
+  const [cur, setCur] = useState(0);
+  const offset = [0, 1900, 3800, 5700, 7600, 9500, 11400, 13300, 15200, 17100, 19000, 20900, 22800, 24700, 26600, 28500];
 
   useEffect(() => {
     setSlideItems(document.querySelectorAll(".images"));
@@ -33,21 +33,15 @@ export default function Banner() {
   }, []);
 
   const moveLeft = () => {
-    if (cur > 1) {
-      setCur((n) => n - 1);
-      setOffset((n) => n - 1900);
-    }
+    setCur((n) => (n - 1 === -1 ? 15 : n - 1));
   };
   const moveRight = () => {
-    if (cur < maxSlide) {
-      setCur((n) => n + 1);
-      setOffset((n) => n + 1900);
-    }
+    setCur((n) => (n + 1 === 16 ? 0 : n + 1));
   };
 
   if (slideItems !== undefined) {
     slideItems.forEach((i) => {
-      i.style.left = `${-offset}px`;
+      i.style.left = `${-offset[cur]}px`;
     });
   }
 
@@ -65,10 +59,8 @@ export default function Banner() {
         <MdKeyboardArrowRight size={40} />
       </S.ArrowR>
       <S.PageNum>
-        {cur} / {maxSlide}
+        {cur + 1} / {maxSlide}
       </S.PageNum>
     </S.Container>
   );
 }
-
-// styled-components 자식 요소에 클래스 부여하기
