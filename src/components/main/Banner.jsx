@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import * as S from "../../styles/main/main.style";
+import * as S from "../../styles/main/banner.style";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const images = [
