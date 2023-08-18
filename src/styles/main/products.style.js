@@ -30,6 +30,7 @@ export const ProductWrap = styled.div`
 
 export const Coupon = styled.div`
   position: absolute;
+  z-index: 1;
   background-color: rgb(189, 118, 255);
   color: white;
   height: 32px;

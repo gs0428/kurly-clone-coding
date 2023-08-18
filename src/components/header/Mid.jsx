@@ -4,10 +4,12 @@ import * as C from "../../styles/common.style";
 import { BiSearch } from "react-icons/bi";
 import { CiLocationOn, CiHeart } from "react-icons/ci";
 import { PiShoppingCartLight } from "react-icons/pi";
+import { useRecoilState } from "recoil";
+import { kurlyState } from "../../recoil/kurly";
 
 export default function Mid() {
   const icons = [<CiLocationOn size={36} />, <CiHeart size={36} />, <PiShoppingCartLight size={36} />];
-  const [isMarket, setIsMarket] = useState(true);
+  const [isMarket, setIsMarket] = useRecoilState(kurlyState);
   return (
     <S.Container>
       <C.FlexWrap>
@@ -31,7 +33,7 @@ export default function Mid() {
           </C.FlexWrap>
         </S.KurlyWrap>
         <S.InputWrap>
-          <S.Input placeholder="검색어를 입력해주세요" />
+          <S.Input placeholder={isMarket ? "검색어를 입력해주세요" : "뷰티 상품을 검색하세요"} />
           <S.Search>
             <BiSearch size={30} />
           </S.Search>
