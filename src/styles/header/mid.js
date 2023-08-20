@@ -7,11 +7,12 @@ export const Container = styled.div`
   height: 63px;
 `;
 
-export const Kurly = styled.span`
+export const Kurly = styled.a`
   font-size: 18px;
-  color: ${(props) => (props.isMarket ? "#5f0080" : "rgb(181, 181, 181)")};
+  color: ${(props) => (props.loc ? "#5f0080" : "rgb(181, 181, 181)")};
   margin-left: 11px;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 export const KurlyImg = styled.img`

@@ -1,13 +1,17 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./pages/Root";
-import Home from "./pages/Main";
 import Layout from "./pages/Layout";
+import Market from "./pages/Market";
+import Beauty from "./pages/Beauty";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    children: [{ path: "/", element: <Home /> }],
+    children: [
+      { path: "/", element: <Market /> },
+      { path: "/beauty", element: <Beauty /> },
+    ],
   },
 ]);
 

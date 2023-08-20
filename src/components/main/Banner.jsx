@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
 import * as S from "../../styles/main/banner.style";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { useRecoilValue } from "recoil";
-import { marketBannerState, beautyBannerState } from "../../recoil/banner";
-import { kurlyState } from "../../recoil/kurly";
 
-export default function Banner() {
-  const market = useRecoilValue(marketBannerState);
-  const beauty = useRecoilValue(beautyBannerState);
-  const kurly = useRecoilValue(kurlyState);
-  const [images, setImages] = useState(kurly ? market : beauty);
+export default function Banner({ banner }) {
+  const images = banner;
   const [slideItems, setSlideItems] = useState();
   const [maxSlide, setMaxSlide] = useState(0);
   const [cur, setCur] = useState(0);
@@ -19,11 +13,6 @@ export default function Banner() {
     setSlideItems(document.querySelectorAll(".images"));
     setMaxSlide(document.querySelectorAll(".images").length);
   }, []);
-  useEffect(() => {
-    setMaxSlide(images.length);
-    setCur(0);
-    setImages(images);
-  }, [kurly]);
 
   const moveLeft = () => {
     setCur((n) => (n - 1 === -1 ? images.length - 1 : n - 1));

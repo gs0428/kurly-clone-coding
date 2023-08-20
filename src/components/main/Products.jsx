@@ -2,15 +2,9 @@ import { TbMessage2 } from "react-icons/tb";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import * as S from "../../styles/main/products.style";
 import { useEffect, useState } from "react";
-import { useRecoilValue } from "recoil";
-import { beautyProductState, marketProductState } from "../../recoil/products";
-import { kurlyState } from "../../recoil/kurly";
 
-export default function Products() {
-  const market = useRecoilValue(marketProductState);
-  const beauty = useRecoilValue(beautyProductState);
-  const kurly = useRecoilValue(kurlyState);
-  const products = kurly ? market : beauty;
+export default function Products({ product }) {
+  const products = product;
   const [prod, setProd] = useState();
   const [cur, setCur] = useState(0);
   const offset = [0, 1068, 2136];
