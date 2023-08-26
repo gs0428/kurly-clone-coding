@@ -7,18 +7,50 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const CtgWrap = styled.div`
+export const CtgContainer = styled.div`
   cursor: pointer;
   display: flex;
+  align-items: center;
+  height: 100%;
   &:hover {
     color: #5f0080;
   }
 `;
 
-export const Ctg = styled.span`
+export const CtgWrap = styled.div`
+  position: absolute;
+  margin: 76px 0px 0px 5px;
+  z-index: 2;
+  border: 1px solid black;
+  width: 250px;
+  top: 86px;
+  border: 1px solid rgb(221, 221, 221);
+  display: none;
+`;
+
+export const CtgList = styled.span`
   position: relative;
   margin-left: 14px;
   top: 2px;
+`;
+
+export const Ctg = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 7px 0px 7px 14px;
+  background-color: #ffffff;
+  &:hover {
+    background-color: #f7f7f7;
+  }
+`;
+
+export const CtgImg = styled.img`
+  width: 24px;
+`;
+
+export const CtgName = styled.div`
+  margin-left: 10px;
+  color: #333;
 `;
 
 export const ListWrap = styled.div`
