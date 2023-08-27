@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function Products({ product }) {
   const products = product;
+  const location = window.location.pathname;
   const [prod, setProd] = useState();
   const [cur, setCur] = useState(0);
   const offset = [0, 1068, 2136];
@@ -30,7 +31,7 @@ export default function Products({ product }) {
 
   return (
     <S.Container>
-      <S.Title>이 상품 어때요?</S.Title>
+      <S.Title>{location === "/" ? "이 상품 어때요?" : "이주의 혜택✨"}</S.Title>
       <S.ArrowL cur={cur} onClick={moveLeft}>
         <MdKeyboardArrowLeft size={40} />
       </S.ArrowL>
