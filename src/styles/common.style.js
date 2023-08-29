@@ -50,11 +50,19 @@ export const Img = styled.img`
   }
 `;
 
-export const Cart = styled.img`
-  position: absolute;
+export const CartWrap = styled.div`
+  margin-right: 4px;
+`;
+
+export const Cart = styled.button`
+  width: 100%;
+  background-color: #ffffff;
   display: flex;
-  align-self: self-end;
-  margin: 15px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(221, 221, 221);
+  height: 36px;
+  margin-top: 6px;
 `;
 
 export const Product = styled.div`

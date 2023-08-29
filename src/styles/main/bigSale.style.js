@@ -14,5 +14,5 @@ export const Title = styled.div`
 
 export const SubTitle = styled.div`
   color: rgb(153, 153, 153);
-  margin-top: 10px;
+  margin: 10px 0px 27px 0px;
 `;
