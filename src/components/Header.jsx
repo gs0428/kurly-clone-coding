@@ -8,7 +8,7 @@ export default function Header() {
   const location = window.location.pathname;
   const market = useRecoilValue(marketCtgState);
   const beauty = useRecoilValue(beautyCtgState);
-  const ctg = location === "/" ? market : beauty;
+  const ctg = location === "/kurly-clone-coding" ? market : beauty;
   return (
     <>
       <Top />
