@@ -1,24 +1,14 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Root from "../src/components/Root";
+import { Route, Routes } from "react-router-dom";
 import Layout from "../src/components/Layout";
 import Market from "./pages/Market";
 import Beauty from "./pages/Beauty";
-
-const router = createBrowserRouter([
-  {
-    path: "https://gs0428.github.io/kurly-clone-coding/",
-    element: <Root />,
-    children: [
-      { path: "/", element: <Market /> },
-      { path: "/beauty", element: <Beauty /> },
-    ],
-  },
-]);
-
 function App() {
   return (
     <Layout>
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path="/" element={<Market />} />
+        <Route path="/beauty" element={<Beauty />} />
+      </Routes>
     </Layout>
   );
 }
