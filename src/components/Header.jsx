@@ -3,12 +3,13 @@ import Mid from "../components/layout/header/Mid";
 import Bot from "../components/layout/header/Bot";
 import { useRecoilValue } from "recoil";
 import { beautyCtgState, marketCtgState } from "../recoil/ctg";
+import { isMarketState } from "../recoil/kurly";
 
 export default function Header() {
-  const location = window.location.pathname;
   const market = useRecoilValue(marketCtgState);
   const beauty = useRecoilValue(beautyCtgState);
-  const ctg = location === "/" ? market : beauty;
+  const isMarket = useRecoilValue(isMarketState);
+  const ctg = isMarket ? market : beauty;
   return (
     <>
       <Top />

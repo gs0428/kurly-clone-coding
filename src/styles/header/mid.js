@@ -7,7 +7,7 @@ export const Container = styled.div`
   height: 63px;
 `;
 
-export const Kurly = styled.a`
+export const Kurly = styled.div`
   font-size: 18px;
   color: ${(props) => (props.loc ? "#5f0080" : "rgb(181, 181, 181)")};
   margin-left: 11px;
