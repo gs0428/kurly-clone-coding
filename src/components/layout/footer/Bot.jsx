@@ -1,4 +1,4 @@
-import * as S from "../../styles/footer/bot";
+import * as S from "../../../styles/footer/bot";
 
 export default function Bot() {
   return (

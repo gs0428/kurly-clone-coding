@@ -1,5 +1,5 @@
 import { PiList } from "react-icons/pi";
-import * as S from "../../styles/header/bot";
+import * as S from "../../../styles/header/bot";
 import { useEffect, useState } from "react";
 
 export default function Bot({ ctgs }) {

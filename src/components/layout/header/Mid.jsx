@@ -1,5 +1,5 @@
-import * as S from "../../styles/header/mid";
-import * as C from "../../styles/common.style";
+import * as S from "../../../styles/header/mid";
+import * as C from "../../../styles/common.style";
 import { BiSearch } from "react-icons/bi";
 import { CiLocationOn, CiHeart } from "react-icons/ci";
 import { PiShoppingCartLight } from "react-icons/pi";

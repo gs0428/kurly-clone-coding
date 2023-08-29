@@ -1,5 +1,5 @@
-import * as S from "../../styles/footer/top";
-import * as C from "../../styles/common.style";
+import * as S from "../../../styles/footer/top";
+import * as C from "../../../styles/common.style";
 
 const requests = [
   ["카카오톡 문의", ["월~토요일 | 오전 7시 - 오후 6시", "일/공휴일 | 오전 7시 - 오후 1시"]],

@@ -1,4 +1,4 @@
-import * as S from "../../styles/footer/mid";
+import * as S from "../../../styles/footer/mid";
 
 const datas = [
   [

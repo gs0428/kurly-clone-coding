@@ -3,6 +3,7 @@ import Banner from "../components/main/Banner";
 import Products from "../components/main/Products";
 import { marketBannerState } from "../recoil/banner";
 import { marketProductState } from "../recoil/products";
+import BigSale from "../components/main/BigSale";
 
 export default function Market() {
   const banner = useRecoilValue(marketBannerState);
@@ -11,6 +12,7 @@ export default function Market() {
     <>
       <Banner banner={banner} />
       <Products product={product} />
+      <BigSale />
     </>
   );
 }

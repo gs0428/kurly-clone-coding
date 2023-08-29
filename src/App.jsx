@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Root from "./pages/Root";
-import Layout from "./pages/Layout";
+import Root from "../src/components/Root";
+import Layout from "../src/components/Layout";
 import Market from "./pages/Market";
 import Beauty from "./pages/Beauty";
 

@@ -1,44 +1,46 @@
-import { TbMessage2 } from "react-icons/tb";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import * as S from "../../styles/main/products.style";
+import * as S from "../../styles/main/bigSale.style";
 import * as C from "../../styles/common.style";
-import { useEffect, useState } from "react";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { TbMessage2 } from "react-icons/tb";
 
-export default function Products({ product }) {
-  const products = product;
-  const location = window.location.pathname;
-  const [prod, setProd] = useState();
-  const [cur, setCur] = useState(0);
-  const offset = [0, 1068, 2136];
-  useEffect(() => {
-    setProd(document.querySelectorAll(".product"));
-  }, []);
-
-  const moveLeft = () => {
-    if (cur > 0) {
-      setCur((n) => n - 1);
-    }
-  };
-  const moveRight = () => {
-    if (cur < 2) {
-      setCur((n) => n + 1);
-    }
-  };
-  if (prod !== undefined) {
-    prod.forEach((i) => {
-      i.style.right = `${offset[cur]}px`;
-    });
-  }
-
+export default function BigSale() {
+  const products = [
+    [
+      "",
+      "https://product-image.kurly.com/product/image/13d061a1-df1f-4e36-a676-03f687036cb1.jpeg",
+      "춘천 국물 닭갈비 떡볶이",
+      "20%",
+      "10,000원",
+      "12,500원",
+      "9,999+",
+    ],
+    [
+      "전단특가",
+      "https://img-cf.kurly.com/shop/data/goods/1650348343574l0.jpg",
+      "[제스프리] 뉴질랜드 골드키위 1.1kg (7~10입)",
+      "35%",
+      "10,000원",
+      "16,900원",
+      "9,999+",
+    ],
+    ["전단특가", "https://img-cf.kurly.com/shop/data/goods/1648208560207l0.jpeg", "[애슐리] 오리지널 통살치킨", "25%", "5,920원", "7,900원", "9,999+"],
+    [
+      "전단특가",
+      "https://product-image.kurly.com/product/image/3df368c8-e124-4d06-a9e9-af4c10d01b53.jpeg",
+      "[압구정주꾸미] 주꾸미 볶음 300g",
+      "25%",
+      "6,675원",
+      "8,900원",
+      "999+",
+    ],
+  ];
   return (
     <S.Container>
-      <S.Title>{location === "/" ? "이 상품 어때요?" : "이주의 혜택✨"}</S.Title>
-      <S.ArrowL cur={cur} onClick={moveLeft}>
-        <MdKeyboardArrowLeft size={40} />
-      </S.ArrowL>
-      <S.ArrowR cur={cur} onClick={moveRight}>
-        <MdKeyboardArrowRight size={40} />
-      </S.ArrowR>
+      <S.Title>
+        🔥썸머 빅세일 마지막 3일!
+        <MdKeyboardArrowRight size={32} />
+      </S.Title>
+      <S.SubTitle>다시 없을 특가 찬스를 놓치지 마세요</S.SubTitle>
       <C.ProductContainer>
         {products.map((product, idx) => (
           <C.ProductWrap key={`productwrap${idx}`} className="product">

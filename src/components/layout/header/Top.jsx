@@ -1,4 +1,4 @@
-import * as S from "../../styles/header/top";
+import * as S from "../../../styles/header/top";
 import { BiSolidDownArrow } from "react-icons/bi";
 
 export default function Top() {

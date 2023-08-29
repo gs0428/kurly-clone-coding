@@ -1,6 +1,6 @@
-import Top from "../components/header/Top";
-import Mid from "../components/header/Mid";
-import Bot from "../components/header/Bot";
+import Top from "../components/layout/header/Top";
+import Mid from "../components/layout/header/Mid";
+import Bot from "../components/layout/header/Bot";
 import { useRecoilValue } from "recoil";
 import { beautyCtgState, marketCtgState } from "../recoil/ctg";
 
