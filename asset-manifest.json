@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kurly-clone-coding/static/css/main.38acd057.css",
+    "main.js": "/kurly-clone-coding/static/js/main.5ca388ca.js",
+    "index.html": "/kurly-clone-coding/index.html",
+    "main.38acd057.css.map": "/kurly-clone-coding/static/css/main.38acd057.css.map",
+    "main.5ca388ca.js.map": "/kurly-clone-coding/static/js/main.5ca388ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38acd057.css",
+    "static/js/main.5ca388ca.js"
+  ]
+}
