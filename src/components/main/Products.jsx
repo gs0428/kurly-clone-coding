@@ -33,7 +33,7 @@ export default function Products({ product }) {
 
   return (
     <S.Container>
-      <S.Title>{location === "/kurly-clone-coding" ? "이 상품 어때요?" : "이주의 혜택✨"}</S.Title>
+      <S.Title>{location === "/" ? "이 상품 어때요?" : "이주의 혜택✨"}</S.Title>
       <S.ArrowL cur={cur} onClick={moveLeft}>
         <MdKeyboardArrowLeft size={40} />
       </S.ArrowL>
