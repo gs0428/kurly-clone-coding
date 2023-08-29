@@ -63,6 +63,7 @@ export const Cart = styled.button`
   border: 1px solid rgb(221, 221, 221);
   height: 36px;
   margin-top: 6px;
+  cursor: pointer;
 `;
 
 export const Product = styled.div`

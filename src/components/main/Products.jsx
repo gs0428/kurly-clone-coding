@@ -40,6 +40,13 @@ export default function Products({ product }) {
       <S.ArrowR cur={cur} onClick={moveRight}>
         <MdKeyboardArrowRight size={40} />
       </S.ArrowR>
+      <S.StickyContainer>
+        <S.StickyWrap>
+          <S.StickyImg src="https://res.kurly.com/main/banners/deliveryInfo.png" alt="none" />
+          <S.StickyContent>등급별 혜택</S.StickyContent>
+          <S.StickyContent>레시피</S.StickyContent>
+        </S.StickyWrap>
+      </S.StickyContainer>
       <C.ProductContainer>
         {products.map((product, idx) => (
           <C.ProductWrap key={`productwrap${idx}`} className="product">

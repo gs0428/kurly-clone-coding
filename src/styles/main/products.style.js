@@ -123,3 +123,29 @@ export const ArrowL = styled.div`
   margin: 190px 1050px 0px 10px;
   z-index: 1;
 `;
+
+export const StickyContainer = styled.div`
+  width: 100vw;
+  position: sticky;
+  display: flex;
+  top: 516px;
+  flex-direction: row-reverse;
+`;
+
+export const StickyWrap = styled.div`
+  margin-right: 20px;
+  position: absolute;
+`;
+
+export const StickyImg = styled.img`
+  height: 120px;
+`;
+
+export const StickyContent = styled.div`
+  border: 1px solid rgb(221, 221, 221);
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+`;
