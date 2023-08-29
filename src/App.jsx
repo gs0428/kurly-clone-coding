@@ -6,7 +6,7 @@ import Beauty from "./pages/Beauty";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "https://gs0428.github.io/kurly-clone-coding/",
     element: <Root />,
     children: [
       { path: "/", element: <Market /> },
