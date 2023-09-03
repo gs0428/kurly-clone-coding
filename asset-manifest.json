@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/kurly-clone-coding/static/css/main.38acd057.css",
-    "main.js": "/kurly-clone-coding/static/js/main.9d5d5cfb.js",
+    "main.css": "/kurly-clone-coding/static/css/main.bae9dd71.css",
+    "main.js": "/kurly-clone-coding/static/js/main.1dd963c8.js",
     "index.html": "/kurly-clone-coding/index.html",
-    "main.38acd057.css.map": "/kurly-clone-coding/static/css/main.38acd057.css.map",
-    "main.9d5d5cfb.js.map": "/kurly-clone-coding/static/js/main.9d5d5cfb.js.map"
+    "main.bae9dd71.css.map": "/kurly-clone-coding/static/css/main.bae9dd71.css.map",
+    "main.1dd963c8.js.map": "/kurly-clone-coding/static/js/main.1dd963c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.38acd057.css",
-    "static/js/main.9d5d5cfb.js"
+    "static/css/main.bae9dd71.css",
+    "static/js/main.1dd963c8.js"
   ]
 }
