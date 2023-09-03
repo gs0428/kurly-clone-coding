@@ -4,29 +4,22 @@ import { TbMessage2 } from "react-icons/tb";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { useRef, useState } from "react";
 
-const HOUR = 1000 * 3600 * 24;
-const MINUTE = 1000 * 60;
 const SECOND = 1000;
 
 export default function SpecialPrice() {
-  const [hour, setHour] = useState(23);
-  const [minute, setMinute] = useState(59);
-  const [second, setSecond] = useState(59);
+  const [hour, setHour] = useState(23 - new Date().getHours());
+  const [minute, setMinute] = useState(59 - new Date().getMinutes());
+  const [second, setSecond] = useState(59 - new Date().getSeconds());
   const start = useRef(false);
 
   if (!start.current) {
     setInterval(() => {
-      setSecond((n) => (n === 0 ? 59 : n - 1));
+      setHour(23 - new Date().getHours());
+      setMinute(59 - new Date().getMinutes());
+      setSecond(59 - new Date().getSeconds());
       start.current = true;
     }, SECOND);
-    setInterval(() => {
-      setMinute((n) => (n === 0 ? 59 : n - 1));
-    }, MINUTE);
-    setInterval(() => {
-      setHour((n) => (n === 0 ? 23 : n - 1));
-    }, HOUR);
   }
-
   const products = [
     [
       "특별할인",
