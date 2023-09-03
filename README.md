@@ -1,6 +1,6 @@
 # Kurly Clone Coidng
 
-개인 공부를 하며 얻은 이론을 적용해가며 클론 코딩을 해보았습니다.
+개인 공부를 하며 얻은 이론을 적용해가며 클론 코딩을 해보았습니다.<br/>
 velog : <a href="https://velog.io/@gs0428/series/Kurly-클론-코딩">Kurly 클론 코딩</a>
 
 ## Library
