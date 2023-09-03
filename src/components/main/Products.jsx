@@ -30,7 +30,6 @@ export default function Products({ product }) {
       i.style.right = `${offset[cur]}px`;
     });
   }
-
   return (
     <S.Container>
       <S.Title>{location === "/" ? "이 상품 어때요?" : "이주의 혜택✨"}</S.Title>
@@ -40,7 +39,7 @@ export default function Products({ product }) {
       <S.ArrowR cur={cur} onClick={moveRight}>
         <MdKeyboardArrowRight size={40} />
       </S.ArrowR>
-      <S.StickyContainer>
+      <S.StickyContainer id="sticky">
         <S.StickyWrap>
           <S.StickyImg src="https://res.kurly.com/main/banners/deliveryInfo.png" alt="none" />
           <S.StickyContent>등급별 혜택</S.StickyContent>
