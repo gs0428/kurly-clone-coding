@@ -2,40 +2,58 @@ import * as C from "../../styles/common.style";
 import * as S from "../../styles/main/specialPrice";
 import { TbMessage2 } from "react-icons/tb";
 import { PiShoppingCartLight } from "react-icons/pi";
-import { useEffect, useState } from "react";
-import { addDays, differenceInHours, differenceInMinutes, differenceInSeconds } from "date-fns";
+import { useRef, useState } from "react";
+
+const HOUR = 1000 * 3600 * 24;
+const MINUTE = 1000 * 60;
+const SECOND = 1000;
 
 export default function SpecialPrice() {
-  const [hour, setHour] = useState(47);
+  const [hour, setHour] = useState(23);
   const [minute, setMinute] = useState(59);
   const [second, setSecond] = useState(59);
-  useEffect(() => {
+  const start = useRef(false);
+
+  if (!start.current) {
     setInterval(() => {
-      document.querySelector("#minuteStick").style.animationDuration = "1s";
-    }, 1000);
+      setSecond((n) => (n === 0 ? 59 : n - 1));
+      start.current = true;
+    }, SECOND);
     setInterval(() => {
-      document.querySelector("#minuteStick").style.animationDuration = "0s";
-    }, 2000);
-  }, []);
+      setMinute((n) => (n === 0 ? 59 : n - 1));
+    }, MINUTE);
+    setInterval(() => {
+      setHour((n) => (n === 0 ? 23 : n - 1));
+    }, HOUR);
+  }
+
   const products = [
     [
-      "전단특가",
-      "https://img-cf.kurly.com/shop/data/goods/1650348343574l0.jpg",
-      "[제스프리] 뉴질랜드 골드키위 1.1kg (7~10입)",
-      "35%",
-      "10,000원",
-      "16,900원",
+      "특별할인",
+      "https://product-image.kurly.com/product/image/531c8270-058e-4be3-aecf-6942816df709.jpg",
+      "1등급 이상 한우 차돌박이 구이용 200g (냉동)",
+      "41%",
+      "11,160원",
+      "19,200원",
+      "999+",
+    ],
+    [
+      "특별할인",
+      "https://product-image.kurly.com/product/image/858089c2-c98f-4cbe-9f55-e28097a3bac2.jpg",
+      "[풀무원다논] 그릭요거트 400g 2종(택1)",
+      "30%",
+      "2,786원",
+      "3,980원",
       "9,999+",
     ],
-    ["전단특가", "https://img-cf.kurly.com/shop/data/goods/1648208560207l0.jpeg", "[애슐리] 오리지널 통살치킨", "25%", "5,920원", "7,900원", "9,999+"],
     [
-      "전단특가",
-      "https://product-image.kurly.com/product/image/3df368c8-e124-4d06-a9e9-af4c10d01b53.jpeg",
-      "[압구정주꾸미] 주꾸미 볶음 300g",
-      "25%",
-      "6,675원",
-      "8,900원",
-      "999+",
+      "특별할인",
+      "https://product-image.kurly.com/product/image/6af4ccee-4c8c-4692-9e0b-63ebe47cc227.jpg",
+      "[지오마] 프리미엄 바디스크럽 600g 4종(택1)",
+      "60%",
+      "14,900원",
+      "38,000원",
+      "525",
     ],
   ];
 
@@ -44,16 +62,17 @@ export default function SpecialPrice() {
       <C.ProductContainer>
         <S.Wrap>
           특별 할인
-          <S.SubContent>48시간 한정 특가!</S.SubContent>
+          <S.SubContent>24시간 한정 특가!</S.SubContent>
           <S.Timer>
             <S.Clock>
               <S.HourStick />
               <S.Pin />
               <S.MinuteStick id="minuteStick" />
             </S.Clock>
-            <div>
-              {hour}:{minute}:{second}
-            </div>
+            <S.TimeTicking>
+              {Math.floor(hour / 10) === 0 ? "0" + hour : hour}:{Math.floor(minute / 10) === 0 ? "0" + minute : minute}:
+              {Math.floor(second / 10) === 0 ? "0" + second : second}
+            </S.TimeTicking>
           </S.Timer>
           <S.Additional>망설이면 늦어요!</S.Additional>
         </S.Wrap>

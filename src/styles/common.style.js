@@ -98,3 +98,9 @@ export const ReviewWrap = styled.div`
 export const Review = styled.span`
   margin-left: 2px;
 `;
+
+export const Promotion = styled.img`
+  margin-top: 120px;
+  width: 1050px;
+  height: 140px;
+`;

@@ -4,62 +4,8 @@ const clock = keyframes`
   0% {
     transform: rotate(90deg);
   }
-  5% {
-    transform: rotate(108deg);
-  }
-  10% {
-    transform: rotate(126deg);
-  }
-  15% {
-    transform: rotate(144deg);
-  }
-  20% {
-    transform: rotate(162deg);
-  }
-  25% {
-    transform: rotate(180deg);
-  }
-  30% {
-    transform: rotate(198deg);
-  }
-  35% {
-    transform: rotate(216deg);
-  }
-  40% {
-    transform: rotate(234deg);
-  }
-  45% {
-    transform: rotate(252deg);
-  }
   50% {
-    transform: rotate(270deg);
-  }
-  55% {
-    transform: rotate(288deg);
-  }
-  60% {
-    transform: rotate(306deg);
-  }
-  65% {
-    transform: rotate(324deg);
-  }
-  70% {
-    transform: rotate(342deg);
-  }
-  75% {
-    transform: rotate(360deg);
-  }
-  80% {
-    transform: rotate(378deg);
-  }
-  85% {
-    transform: rotate(396deg);
-  }
-  90% {
-    transform: rotate(414deg);
-  }
-  95% {
-    transform: rotate(432deg);
+    transform: rotate(450deg);
   }
   100% {
     transform: rotate(450deg);
@@ -127,10 +73,11 @@ export const MinuteStick = styled.div`
   border-radius: 1px 1px 0px 0px;
   transform-origin: bottom center;
   transform: rotate(90deg);
-  // animation-name : ${clock}
-  // animation-duration: 0.5s;
-  // animation-iteration-count: infinite;
-  animation: ${clock} 0s 0s infinite;
+  animation: ${clock} 2s 0s infinite;
+`;
+
+export const TimeTicking = styled.div`
+  margin-top: 6px;
 `;
 
 export const Additional = styled.div`
