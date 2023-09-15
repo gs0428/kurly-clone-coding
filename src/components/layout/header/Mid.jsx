@@ -5,6 +5,7 @@ import { CiLocationOn, CiHeart } from "react-icons/ci";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { useRecoilState } from "recoil";
 import { isMarketState } from "../../../recoil/kurly";
+import { useId } from "react";
 
 export default function Mid() {
   const icons = [<CiLocationOn size={36} />, <CiHeart size={36} />, <PiShoppingCartLight size={36} />];

@@ -4,6 +4,8 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import * as S from "../../styles/main/products.style";
 import * as C from "../../styles/common.style";
 import { useEffect, useState } from "react";
+import { useSetRecoilState } from "recoil";
+import { modalInnerDataState, modalState } from "../../recoil/modal";
 
 export default function Products({ product }) {
   const products = product;
@@ -11,6 +13,8 @@ export default function Products({ product }) {
   const [prod, setProd] = useState();
   const [cur, setCur] = useState(0);
   const offset = [0, 1068, 2136];
+  const setModal = useSetRecoilState(modalState);
+  const setModalInnerData = useSetRecoilState(modalInnerDataState);
   useEffect(() => {
     setProd(document.querySelectorAll(".product"));
   }, []);
@@ -55,7 +59,12 @@ export default function Products({ product }) {
             <C.ImgWrap key={`imgwrp${idx}`}>
               <C.Img src={product[1]} alt="none" />
             </C.ImgWrap>
-            <C.Cart>
+            <C.Cart
+              onClick={() => {
+                setModal(true);
+                setModalInnerData({ title: product[2], discountedPrice: product[4], originalPrice: product[5] });
+              }}
+            >
               <C.CartWrap>
                 <PiShoppingCartLight size={20} />
               </C.CartWrap>

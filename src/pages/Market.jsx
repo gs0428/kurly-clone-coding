@@ -7,11 +7,15 @@ import BigSale from "../components/main/BigSale";
 import SpecialPrice from "../components/main/SpecialPrice";
 import * as C from "../styles/common.style";
 import { useEffect, useState } from "react";
+import { modalState } from "../recoil/modal";
+import { createPortal } from "react-dom";
+import Modal from "../components/Modal";
 
 export default function Market() {
   const banner = useRecoilValue(marketBannerState);
   const product = useRecoilValue(marketProductState);
   const [visible, setVisible] = useState(false);
+  const modal = useRecoilValue(modalState);
 
   useEffect(() => {
     let target = document.querySelector("#promotion");
@@ -31,8 +35,10 @@ export default function Market() {
     observer.observe(target);
   }, []);
 
+  console.log(modal);
   return (
     <>
+      {modal && createPortal(<Modal />, document.body)}
       <Banner banner={banner} />
       <Products product={product} />
       <BigSale />
