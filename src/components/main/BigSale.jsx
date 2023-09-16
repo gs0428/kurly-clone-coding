@@ -3,8 +3,12 @@ import * as C from "../../styles/common.style";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { TbMessage2 } from "react-icons/tb";
 import { PiShoppingCartLight } from "react-icons/pi";
+import { modalInnerDataState, modalState } from "../../recoil/modal";
+import { useSetRecoilState } from "recoil";
 
 export default function BigSale() {
+  const setModal = useSetRecoilState(modalState);
+  const setModalInnerData = useSetRecoilState(modalInnerDataState);
   const products = [
     [
       "",
@@ -51,7 +55,12 @@ export default function BigSale() {
             <C.ImgWrap key={`imgwrp${idx}`}>
               <C.Img src={product[1]} alt="none" />
             </C.ImgWrap>
-            <C.Cart>
+            <C.Cart
+              onClick={() => {
+                setModal(true);
+                setModalInnerData({ title: product[2], discountedPrice: product[4], originalPrice: product[5] });
+              }}
+            >
               <C.CartWrap>
                 <PiShoppingCartLight size={20} />
               </C.CartWrap>

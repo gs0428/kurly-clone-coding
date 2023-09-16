@@ -35,7 +35,6 @@ export default function Market() {
     observer.observe(target);
   }, []);
 
-  console.log(modal);
   return (
     <>
       {modal && createPortal(<Modal />, document.body)}

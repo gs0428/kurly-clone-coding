@@ -3,6 +3,8 @@ import * as S from "../../styles/main/specialPrice";
 import { TbMessage2 } from "react-icons/tb";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { useRef, useState } from "react";
+import { modalInnerDataState, modalState } from "../../recoil/modal";
+import { useSetRecoilState } from "recoil";
 
 const SECOND = 1000;
 
@@ -11,6 +13,8 @@ export default function SpecialPrice() {
   const [minute, setMinute] = useState(59 - new Date().getMinutes());
   const [second, setSecond] = useState(59 - new Date().getSeconds());
   const start = useRef(false);
+  const setModal = useSetRecoilState(modalState);
+  const setModalInnerData = useSetRecoilState(modalInnerDataState);
 
   if (!start.current) {
     setInterval(() => {
@@ -77,7 +81,12 @@ export default function SpecialPrice() {
             <C.ImgWrap key={`imgwrp${idx}`}>
               <C.Img src={product[1]} alt="none" />
             </C.ImgWrap>
-            <C.Cart>
+            <C.Cart
+              onClick={() => {
+                setModal(true);
+                setModalInnerData({ title: product[2], discountedPrice: product[4], originalPrice: product[5] });
+              }}
+            >
               <C.CartWrap>
                 <PiShoppingCartLight size={20} />
               </C.CartWrap>

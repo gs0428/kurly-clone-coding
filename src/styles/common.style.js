@@ -73,7 +73,7 @@ export const Product = styled.div`
 
 export const PriceWrap = styled.div`
   font-weight: 800;
-  margin-bottom: 8px;
+  margin-right: 4px;
 `;
 
 export const Discount = styled.span`
@@ -96,7 +96,7 @@ export const ReviewWrap = styled.div`
 `;
 
 export const Review = styled.span`
-  margin-left: 2px;
+  margin: 8px 0px 0px 2px;
 `;
 
 export const Promotion = styled.img`
